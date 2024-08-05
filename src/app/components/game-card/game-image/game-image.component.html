@@ -1,1 +1,12 @@
-<p>game-image works!</p>
+<div 
+    class="card-image" 
+    (mouseenter)="onMouseEnter()" 
+    (mouseleave)="onMouseLeave()"
+>
+    <img 
+        class="image"
+        [src]="imagePath"
+        alt=""
+    >
+    <div *ngIf="gameFooter" class="start-game">Start Game</div>
+</div>
