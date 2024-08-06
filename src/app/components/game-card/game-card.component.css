@@ -1,40 +1,69 @@
+.container-game {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 14rem;
+    height: 20rem;
+    transition: transform 0.8s; 
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container-game:hover {
+    transform: scale(1.15);
+}
+
 .card-image {
     position: relative;
-    width: 12rem;
-    height: 13rem;
-    display: flex;
-    /* margin-top: 2rem; */
-    overflow: visible; 
+    width: 100%;
+    height: 70%; 
+    overflow: hidden;
 }
 
 .card-image img {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s; /* Transição suave para o aumento da imagem */
-}
-
-.card-image:hover img {
-    transform: scale(1.15); /* Aumenta o tamanho da imagem quando o mouse está sobre o card */
-    cursor: pointer;
+    object-fit: cover;
 }
 
 .start-game {
     position: absolute;
-    bottom: -14px;
-    width: 100%;
-    height: 1.5rem;
-    background: linear-gradient(to right, #000000 0%, rgba(41, 41, 41, 0.618) 50%, #000000 100%);
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    background: rgba(0, 0, 0, 0.5);
     color: white;
+    text-align: center; 
+    padding: 0.5rem; 
+    opacity: 0; 
+    visibility: hidden; /* Começa invisível e não afeta o layout */
+    transition: opacity 0.4s, visibility 0.4s; 
+}
+
+.container-game:hover .start-game {
+    opacity: 1;
+    visibility: visible; 
+}
+
+.game-options {
+    width: 100%;
+    height: 30%; 
+    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
-    opacity: 100; /* Começa invisível */
-    transition: opacity 0.4s; /* Transição suave para a opacidade */
+    opacity: 0;
+    visibility: hidden; /* Começa invisível e não afeta o layout */
+    position: absolute; /* Garante que o elemento não afete o layout */
+    bottom: 0; /* Posiciona na parte inferior do contêiner pai */
+    transition: opacity 0.4s, visibility 0.4s; 
+    z-index: 10; /* Garante que o elemento esteja acima de outros conteúdos */
 }
 
-.card-image:hover .start-game {
-    opacity: 1; /* Torna visível quando o card está em foco */
-    transform: scale(1.15);
+.container-game:hover .game-options {
+    opacity: 1;
+    visibility: visible; /* Torna visível quando o contêiner está em foco */
 }

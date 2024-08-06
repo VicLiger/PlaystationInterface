@@ -1,12 +1,15 @@
-<div 
-    class="card-image" 
-    (mouseenter)="onMouseEnter()" 
-    (mouseleave)="onMouseLeave()"
->
-    <img 
-        class="image"
-        [src]="imagePath"
-        alt=""
-    >
-    <div *ngIf="gameFooter" class="start-game">Iniciar</div>
+<div class="container-game">
+    
+    <div class="card-image">
+        <img class="image" [src]="imagePath" alt="">
+        <div class="start-game">Iniciar</div>
+    </div>
+
+    <div class="game-options">
+        <!-- <ul>
+            <li>Visão geral</li>
+            <li>Atividades Recentes</li>
+            <li>Itens Relacionados</li>
+        </ul> -->
+    </div>
 </div>
