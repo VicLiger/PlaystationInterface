@@ -23,7 +23,7 @@ export class GameImageComponent implements OnInit {
     // Define um atraso de 0.5 segundos antes de mostrar o texto
     this.hoverTimeout = setTimeout(() => {
       this.gameFooter = true;
-    }, 400); // 500 milissegundos de atraso
+    }, 300); // 500 milissegundos de atraso
   }
 
   onMouseLeave() {
