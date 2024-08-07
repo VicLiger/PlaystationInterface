@@ -1,15 +1,15 @@
-<div class="container-game">
-    
-    <div class="card-image">
-        <img class="image" [src]="imagePath" alt="">
-        <div class="start-game">Iniciar</div>
+<div class="container-game-legend">
+    <div class="card-image"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"   
+    >
+        <img [src]="imagePath" alt="Game Card">
+        <div class="start-game">Start Game</div>
     </div>
-
-    <div class="game-options">
-        <!-- <ul>
-            <li>Visão geral</li>
-            <li>Atividades Recentes</li>
-            <li>Itens Relacionados</li>
-        </ul> -->
+    <div class="game-options" 
+    [ngStyle]="{ transform: gameFooter ? 'scale(1.15)' : 'scale(1)', opacity: gameFooter ? '1' : '0' }">
+        <!-- Options content here -->
     </div>
 </div>
+
+

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,25 +12,20 @@ import { CommonModule } from '@angular/common';
 })
 export class GameCardComponent {
 
-  @Input()
-  imagePath: string = "../../../../assets/Cyberpunk_2077.png";
-  
-  @Input()
-  gameFooter: boolean = false;
 
-  private hoverTimeout: any;
+  @Input()
+  imagePath: string = "../../../../assets/Cyberpunk_2077.png"
+  gameFooter: boolean = false
+  
+
   onMouseEnter() {
-    // Define um atraso de 0.5 segundos antes de mostrar o texto
-    this.hoverTimeout = setTimeout(() => {
-      this.gameFooter = true;
-    }, 300); // 500 milissegundos de atraso
+    
+    this.gameFooter = true
   }
 
   onMouseLeave() {
-    // Limpa o timeout para evitar o atraso na remoção do texto
-    clearTimeout(this.hoverTimeout);
-    // Remove o texto imediatamente
-    this.gameFooter = false;
+   
+    this.gameFooter = false
   }
 
   constructor() {}

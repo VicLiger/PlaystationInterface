@@ -1,25 +1,35 @@
-.container-game {
+.container-game-legend {
     position: relative;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
     width: 14rem;
-    height: 20rem;
-    transition: transform 0.8s; 
-    margin: auto;
-    margin-top: 50px;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
 }
 
-.container-game:hover {
-    transform: scale(1.15);
-}
+
+/* CARD DO GAME */
 
 .card-image {
     position: relative;
     width: 100%;
-    height: 70%; 
+    height: 15rem;
+    top: 0; 
+    left: 0;
+    transition: transform 0.8s;
+    z-index: 1; 
+    object-fit: cover;
     overflow: hidden;
+
 }
+
+.card-image:hover {
+    transform: scale(1.15);
+}
+
+
+
 
 .card-image img {
     position: absolute;
@@ -43,27 +53,35 @@
     transition: opacity 0.4s, visibility 0.4s; 
 }
 
-.container-game:hover .start-game {
+.card-image:hover .start-game {
     opacity: 1;
     visibility: visible; 
 }
 
+
 .game-options {
-    width: 100%;
-    height: 30%; 
-    background-color: green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden; /* Começa invisível e não afeta o layout */
-    position: absolute; /* Garante que o elemento não afete o layout */
-    bottom: 0; /* Posiciona na parte inferior do contêiner pai */
-    transition: opacity 0.4s, visibility 0.4s; 
-    z-index: 10; /* Garante que o elemento esteja acima de outros conteúdos */
+  position: absolute;
+  width: 100%;
+  height: 7.4rem;
+  background-color: green;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.8s, opacity 0.4s;
+  opacity: 0;
+  transform: scale(1);
+  z-index: 1; /* Garante que a .game-options esteja abaixo da .card-image */
 }
 
-.container-game:hover .game-options {
-    opacity: 1;
-    visibility: visible; /* Torna visível quando o contêiner está em foco */
+.game-options-expanded {
+  transform: scale(1.15);
+  opacity: 1;
 }
+
+
+
+
+
+
+
+
+
