@@ -2,11 +2,14 @@
     <div class="card-image"
     (mouseenter)="onMouseEnter()"
     (mouseleave)="onMouseLeave()"   
+    [ngStyle]="{ transform: gameFooter ? 'scale(1.15)' : 'scale(1)'}"
     >
         <img [src]="imagePath" alt="Game Card">
         <div class="start-game">Start Game</div>
     </div>
     <div class="game-options" 
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()" 
     [ngStyle]="{ transform: gameFooter ? 'scale(1.15)' : 'scale(1)', opacity: gameFooter ? '1' : '0' }">
         
         
