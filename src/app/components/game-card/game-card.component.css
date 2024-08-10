@@ -24,10 +24,6 @@
 
 }
 
-.card-image:hover {
-    transform: scale(1.15);
-}
-
 
 .card-image img {
     position: absolute;
