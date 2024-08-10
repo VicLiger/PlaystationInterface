@@ -2,15 +2,21 @@
     (mouseleave)="onMouseLeave()"   
     >
     <div class="card-image"
-    (mouseenter)="onMouseEnter()"
-    [ngStyle]="{ transform: gameFooter ? 'scale(1.15)' : 'scale(1)'}"
-    >
-        <img [src]="imagePath" alt="Game Card">
-        <div class="start-game">Start Game</div>
+     (mouseenter)="onMouseEnter()"
+     [ngStyle]="{ 
+       transform: gameFooter ? 'scale(1.25)' : 'scale(1)', 
+       boxShadow: gameFooter ? '0 0 3.5px 2px rgba(0, 0, 255, 0.7)' : 'none' 
+            }">
+            <img [src]="imagePath" alt="Game Card">
+            <div class="start-game">Iniciar</div>
     </div>
+
     <div class="game-options"  
-    [ngStyle]="{ transform: gameFooter ? 'scale(1.15)' : 'scale(1)', opacity: gameFooter ? '1' : '0' }">
+    [ngStyle]="{ transform: gameFooter ? 'scale(1.25)' : 'scale(1)', opacity: gameFooter ? '1' : '0' }">
         
+    <button class="button-options">Visão geral</button>
+    <button class="button-options">Atividades recentes</button>
+    <button class="button-options">Itens relacionados</button>
         
     </div>
 </div>
