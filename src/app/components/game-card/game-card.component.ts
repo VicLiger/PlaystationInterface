@@ -14,7 +14,7 @@ export class GameCardComponent {
 
 
   @Input()
-  imagePath: string = "../../../../assets/Cyberpunk_2077.png"
+  imagePath: string = ''
   gameFooter: boolean = false
   
 

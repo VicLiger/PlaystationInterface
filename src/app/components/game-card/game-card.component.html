@@ -13,12 +13,21 @@
 
     <div class="game-options"  
     [ngStyle]="{ transform: gameFooter ? 'scale(1.25)' : 'scale(1)', opacity: gameFooter ? '1' : '0' }">
-        
-    <button class="button-options">Visão geral</button>
-    <button class="button-options">Atividades recentes</button>
-    <button class="button-options">Itens relacionados</button>
-        
-    </div>
+
+      <button class="button-options" [attr.disabled]="!gameFooter ? true : null" 
+              [ngClass]="{'disabled-button': !gameFooter}">
+          Visão geral
+      </button>
+      <button class="button-options" [attr.disabled]="!gameFooter ? true : null" 
+              [ngClass]="{'disabled-button': !gameFooter}">
+          Atividades recentes
+      </button>
+      <button class="button-options" [attr.disabled]="!gameFooter ? true : null" 
+              [ngClass]="{'disabled-button': !gameFooter}">
+          Itens relacionados
+      </button>
+
+  </div>
 </div>
 
 
