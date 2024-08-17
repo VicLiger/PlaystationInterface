@@ -1,7 +1,10 @@
-.bar{
+.container-bar{
     width: 90%;
     height: 5rem;
     background-color: red;
     margin: auto;
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
